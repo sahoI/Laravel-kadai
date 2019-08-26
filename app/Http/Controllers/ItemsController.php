@@ -13,9 +13,24 @@ class ItemsController extends Controller
      */
     public function index()
     {
-        return response()->json([
-          ['name' => 'Yohei']
-        ]);
+        $array = array(
+          [
+            'id' => 1,
+          'title' => 'ラーメン',
+          'info' => 'こってり',
+          'image' => '',
+          'price' => 500,
+            ],
+          [
+            'id' => 2,
+            'title' => 'ラーメン',
+            'info' => 'こってり',
+            'image' => '',
+            'price' => 500,
+            ]
+        );
+        $json = json_encode($array, JSON_UNESCAPED_UNICODE);
+        return $json;
     }
 
     /**

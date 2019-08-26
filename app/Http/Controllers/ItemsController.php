@@ -13,7 +13,9 @@ class ItemsController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json([
+          ['name' => 'Yohei']
+        ]);
     }
 
     /**
